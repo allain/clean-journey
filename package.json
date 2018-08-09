@@ -1,0 +1,21 @@
+{
+  "name": "clean-journey",
+  "version": "0.0.0",
+  "description": "Clean Architecture Journey",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest src/",
+    "test:watch": "jest src/ --watch"
+  },
+  "keywords": [],
+  "author": "Allain Lalonde <allain.lalonde@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^23.3.1",
+    "@types/node": "^10.5.5",
+    "jest": "^23.4.2",
+    "typescript": "^3.0.1",
+    "ts-jest": "^23.0.1"
+  }
+}
