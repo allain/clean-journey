@@ -5,15 +5,16 @@ type FeatureSpec = {
   createdAt?: number;
 };
 
-const DEFAULT_PROPS = { id: null, title: null, description: null };
-
 export default class Feature {
   public id: string;
   public title: string;
   public description: string;
   public createdAt: number;
 
-  constructor(props: FeatureSpec = DEFAULT_PROPS) {
-    Object.assign(this, { ...props, createdAt: props.createdAt || Date.now() });
+  constructor(spec: FeatureSpec = {}) {
+    this.id = spec.id || null;
+    this.title = spec.title || null;
+    this.description = spec.description || null;
+    this.createdAt = spec.createdAt || Date.now();
   }
 }
