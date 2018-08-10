@@ -3,17 +3,13 @@ import FeatureRegistry from "./interfaces/FeatureRegistry";
 import Feature from "../entities/Feature";
 
 class MemoryFeatureRegistry implements FeatureRegistry {
-  private id: number;
-  constructor() {
-    this.id = 0;
-  }
+  private id: number = 0;
 
   async createFeature({ title, description }): Promise<Feature> {
     return new Feature({
       id: "" + ++this.id,
       title,
-      description,
-      createdAt: Date.now()
+      description
     });
   }
 }
